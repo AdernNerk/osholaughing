@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/w3.css">
+	<script type="text/javascript" src="./script/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<title></title>
+</head>
+<body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style type="text/css">
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	background: #262626 -webkit-gradient(linear, left top, right bottom, from(#262626), to(#202020));
+}
+a
+{
+	text-decoration: none;
+}
+.nav
+{
+	z-index: 999;
+	width: 100%;
+	height:50px;
+	background-color: #eee;
+	color: #202020;
+	border-bottom: 1px solid #000;
+}
+.nav .w3-left
+{
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 10px;
+	cursor: pointer;
+}
+.nav .w3-right
+{
+	font-size: 20px;
+	margin-left:5px;
+	margin-right: 5px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+</style>
+
+<div class="w3-container w3-top nav pads">
+	<div class="w3-container w3-right">
+		<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=osholaughing@gmail.com&su=Query" target="_blank"><i class="fas fa-envelope"></i></a>
+	</div>
+	<div class="w3-container w3-right">
+		<a href="https://twitter.com/osholaughing" target="_blank"><i class="fab fa-twitter"></i></a>
+	</div>
+	<div class="w3-container w3-right open-modal-c" data-modal="#modal1-c"><i class="fab fa-whatsapp"></i></div>
+	<div class="w3-container w3-right">
+		<a href="https://instagram.com/osholaughing" target="_blank"><i class="fab fa-instagram"></i></a>
+	</div>
+	<div class="w3-container w3-right">
+		<a href="https://www.youtube.com/channel/UCnzlY_nUKbCWXqK4UjjfQLw" target="_blank"><i class="fab fa-youtube"></i></a>
+	</div>
+	<div class="w3-container w3-right">
+		<a href="http://facebook.com/osholaughing" target="_blank"><i class="fab fa-facebook-f"></i></a>
+	</div>
+</div>
+
+
+<style>
+
+.title-c
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-c p
+{
+font-size:18px;
+}
+
+.close-modal-c
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-c:hover
+{
+	background-color: tomato;
+}
+.overlay-c {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-c.open-c {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-c .modal-c {
+  background: white;
+  text-clign: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-c .modal-c.open-c {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-c .modal-c.open-c .content-c {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-c .modal-c .content-c {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-c .modal-c .title-c {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	.overlay-c, #modal1-c
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+<div class='modal-c' id='modal1-c'>
+	<div class='content-c'>
+		<div class='title-c'>Contact Us</div>
+		<hr>
+		<div>
+			WhatsApp Number
+			<br>
+			+91 7678516839
+		</div>
+		<br><br>
+		<a class='w3-center close-modal-c' data-modal="#modal1-c" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-c").each( function(){
+	$(this).wrap('<div class="overlay-c"></div>')
+});
+
+$(".open-modal-c").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-c").addClass("open-c");
+	setTimeout( function(){
+		$(modal).addClass("open-c");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-c")){
+			$(target).find(".modal-c").each( function(){
+				$(this).removeClass("open-c");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-c");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-c").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-c");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-c").removeClass("open-c");
+	}, 350);
+	
+});	
+</script>
+
+
+<style type="text/css">
+#particles-js
+{
+	background: #262626 -webkit-gradient(linear, left top, right bottom, from(#262626), to(#202020));
+	height: 500px;
+}
+/*canvas 
+{   position: absolute;
+	top: 0; 
+	z-index: -1;
+}
+*/
+.first-container
+{
+	position: absolute;
+	top:0px;
+	text-align: center;
+	width: 100%;
+	background-color: transparent;
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+.first-img
+{
+	margin-top: 32px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:3px solid #eee;
+	overflow: hidden;
+	margin:auto;
+}
+.first-img img
+{
+	width:100%;
+	height: auto;
+}
+.first-heading
+{
+	margin-top: 12px; 
+	margin-bottom: 22px;
+	font-size: 3em;
+	color: #fff;
+	text-align: center;
+	font-weight: 600;
+	width: 100%;
+}
+.first-tell
+{
+	color: #eee;
+	font-size: 1.5em;
+}
+.button
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	height: auto;
+}
+.button-1
+{
+	background-color: #419af4;
+	color: #262626;
+	font-weight: 600;
+	border:2px solid #eee;
+	font-size: 20px;
+	padding:10px;
+	padding-left:20px;
+	padding-right:20px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.button-2
+{
+	background-color: #f4cd41;
+	color: #262626;
+	border:2px solid #eee;
+	font-weight: 600;
+	font-size: 20px;
+	padding:10px;
+	margin-bottom: 10px;
+	padding-left:20px;
+	padding-right:20px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-right: 20px;
+}
+.button-3
+{
+	background-color: #e58d44;
+	color: #262626;
+	border:2px solid #eee;
+	font-weight: 600;
+	font-size: 20px;
+	padding:10px;
+	margin-bottom: 10px;
+	padding-left:20px;
+	padding-right:20px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.exter
+{
+	font-size: 16px;
+	color: grey;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+</style>
+<div class="w3-container" id="particles-js">
+
+	<div class="w3-container first-container">
+		<br>
+		<div class="first-heading">
+			Laughing & Silence
+		</div>
+		<div class="first-tell">
+			<i class="fas fa-quote-left"></i>
+			&nbsp;
+			Laughing is a unique quality for human being.<br>Laughing is life affirmative, yoga, prayer and mediation as well as therapy.
+			&nbsp;
+			<i class="fas fa-quote-right"></i>
+		</div>
+		<br><br>
+		<div class="button">
+			<a href="https://goo.gl/forms/hJpHZjy4z0f4BoeU2" target="_blank">
+				<div class="button-1">
+					<i class="far fa-envelope"></i>&nbsp;Invite Us
+				</div>
+			</a>
+			<div class="button-2 open-modal-e" data-modal="#modal1-e">
+				<i class="fas fa-user-plus"></i>&nbsp;Join Us
+			</div>
+			<div class="button-3 open-modal-d" data-modal="#modal1-d">
+				<i class="far fa-newspaper"></i>&nbsp;News
+			</div>
+		</div>
+		<br><br>
+		<div class="exter"><i class="fas fa-caret-right"></i>&nbsp;Heartly Thanks to all friends and disciples of Osho and other guru's who guide me in the way of the life.</div>
+		<div id="google_translate_element" class="w3-margin"></div>
+	</div>
+
+</div>
+
+
+<style>
+
+.title-e
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-e p
+{
+font-size:18px;
+}
+
+.close-modal-e
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-e:hover
+{
+	background-color: tomato;
+}
+.overlay-e {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-e.open-e {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-e .modal-e {
+  background: white;
+  text-elign: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-e .modal-e.open-e {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-e .modal-e.open-e .content-e {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-e .modal-e .content-e {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-e .modal-e .title-e {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	.overlay-e, #modal1-e
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+<div class='modal-e' id='modal1-e'>
+	<div class='content-e'>
+		<div class='title-e'>Join Us &nbsp;&nbsp;&nbsp;&nbsp;<a class='close-modal-e' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;padding-left:20px;" data-modal="#modal1-e" href="#">X</a></div>
+		<hr>
+		<div>
+			<style type="text/css">
+			.header-outer-naming-twitter
+			{
+				background-color: #55acee;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #55acee;
+				text-align: center;
+			}
+			.content-inner-button-twitter
+			{
+				padding:10px;
+				border-radius: 2px;
+				border:2px solid #55acee;
+			}
+			</style>
+			<a href="https://twitter.com/osholaughing.com" target="_blank"><div class="header-outer-naming-twitter">Twitter&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<div class="content-inner-button-twitter">
+				<a href="https://twitter.com/osholaughing?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @osholaughing</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<br>
+			<style type="text/css">
+			.header-outer-naming-facebook
+			{
+				background-color: #3b5999;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #3b5999;
+				text-align: center;
+			}
+			.content-inner-button-facebook
+			{
+				padding:10px;
+				border-radius: 2px;
+				border:2px solid #3b5999;
+			}
+			</style>
+			<a href="https://facebook.com/osholaughing.com" target="_blank"><div class="header-outer-naming-facebook">Facebook&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<div class="content-inner-button-facebook">
+				<div class="fb-like" data-href="https://facebook.com/osholaughing" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+			</div>
+			<br>
+			<style type="text/css">
+			.header-outer-naming-youtube
+			{
+				background-color: #cd201f;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #cd201f;
+				text-align: center;
+			}
+			.content-inner-button-youtube
+			{
+				padding:10px;
+				border-radius: 2px;
+				border:2px solid #cd201f;
+			}
+			</style>
+			<a href="https://youtube.com/UCnzlY_nUKbCWXqK4UjjfQLw" target="_blank"><div class="header-outer-naming-youtube">YouTube&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<div class="content-inner-button-youtube">
+				<script src="https://apis.google.com/js/platform.js"></script>
+				<div class="g-ytsubscribe" style="padding:8px !important;border-radius:2px;font-size: 16px !important" data-channelid="UCnzlY_nUKbCWXqK4UjjfQLw" data-layout="default" data-count="hidden"></div>
+			</div>
+			<br>
+			<style type="text/css">
+			.header-outer-naming-instagram
+			{
+				background-color: #e4405f;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #e4405f;
+				text-align: center;
+			}
+			.content-inner-button-instagram
+			{
+				padding:10px;
+				border-radius: 2px;
+				border:2px solid #e4405f;
+			}
+			</style>
+			<a href="https://instagram.com/osholaughing" target="_blank"><div class="header-outer-naming-instagram">Instagram&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+		</div>
+		<br><br>
+		<a class='close-modal-e' data-modal="#modal1-e" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-e").each( function(){
+	$(this).wrap('<div class="overlay-e"></div>')
+});
+
+$(".open-modal-e").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-e").addClass("open-e");
+	setTimeout( function(){
+		$(modal).addClass("open-e");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-e")){
+			$(target).find(".modal-e").each( function(){
+				$(this).removeClass("open-e");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-e");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-e").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-e");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-e").removeClass("open-e");
+	}, 350);
+	
+});	
+</script>
+
+<style>
+
+.title-d
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-d p
+{
+font-size:18px;
+}
+
+.close-modal-d
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-d:hover
+{
+	background-color: tomato;
+}
+.overlay-d {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-d.open-d {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-d .modal-d {
+  background: white;
+  text-dlign: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-d .modal-d.open-d {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-d .modal-d.open-d .content-d {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-d .modal-d .content-d {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-d .modal-d .title-d {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	.overlay-d, #modal1-d
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+<div class='modal-d' id='modal1-d'>
+	<div class='content-d'>
+		<div class='title-d'>News &nbsp;&nbsp;&nbsp;&nbsp;<a class='close-modal-d' style="width:50px;color:#fff; float:right;padding:5px;padding-left:20px;border-radius: 5px;" data-modal="#modal1-d" href="#">X</a></div>
+		<hr>
+		<div>
+			<a class="twitter-timeline" href="https://twitter.com/osholaughing?ref_src=twsrc%5Etfw">Tweets by osholaughing</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<br><br>
+		<a class='close-modal-d' data-modal="#modal1-d" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-d").each( function(){
+	$(this).wrap('<div class="overlay-d"></div>')
+});
+
+$(".open-modal-d").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-d").addClass("open-d");
+	setTimeout( function(){
+		$(modal).addClass("open-d");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-d")){
+			$(target).find(".modal-d").each( function(){
+				$(this).removeClass("open-d");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-d");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-d").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-d");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-d").removeClass("open-d");
+	}, 350);
+	
+});	
+</script>
+
+<script>
+$("#particles-js").height($(document).height());
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="./script/particles.js"></script>
+<script type="text/javascript" src="./script/app.js"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<style type="text/css">
+
+.instagram h4
+{
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #fff;
+}
+.instagram h6
+{
+	font-size:15px;
+	color: #6c98e1;
+	margin-bottom: 15px;
+}
+.youtube
+{
+	background-color: #eee;
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+.youtube h4
+{
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.youtube h6
+{
+	font-size:15px;
+	color: #6c98e1;
+	margin-bottom: 15px;
+}
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 6px;
+	height:6px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	background-color: #555;
+}
+.youtube-vids
+{
+	display: flex;
+	background-color: #eee;
+	padding-top: 22px;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	height: 190px;
+}
+.youtube-vids iframe
+{
+	height: 130px;
+	width:auto;
+	float: left;
+	margin:5px;
+	margin-left: 13px;
+	margin-right: 13px;
+}
+.youtube-vids .gh
+{
+	background-color: #202020;
+	color: #fff;
+	border-radius: 3px;
+	border:2px solid #202020;
+	height: 130px;
+	width: 100px;
+	padding-left:25px;
+	padding-right:25px;
+	margin-top:5px;
+	margin-right:15px;
+	text-align: center;
+	margin-left: 13px;
+	font-size: 18px;
+	padding-top: 30px;
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.youtube-vids .gh:hover
+{
+	color: #202020;
+	border: 2px solid #202020;
+	background-color: #eee;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+</style>
+<div class="w3-container youtube pads">
+	<h4 style="color: #202020">Take Life As a Beautiful Joke</h4>
+	<h6>WE ARE ON YOUTUBE</h6>
+	<div class="w3-container youtube-vids" id="style-1">
+		<iframe src="https://www.youtube.com/embed/ASuoI4Ncu5o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/w3cjTd7k6ZQ?list=UUCz8Pa8iPH4ZfAQP-z_tqaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/Sc91IiYOfGI?list=UUCz8Pa8iPH4ZfAQP-z_tqaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/RE_6mTv1wEg?list=UUCz8Pa8iPH4ZfAQP-z_tqaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/f10ARGtVGjs?list=UUCz8Pa8iPH4ZfAQP-z_tqaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<div class="gh">Show <br>More <br><i class="fas fa-angle-right"></i></div>
+	</div>
+</div>
+<br>
+<br>
+
+<div class="w3-container instagram pads">
+	<h4>Spreading Hapiness In Life</h4>
+	<h6>WE ARE ON INSTAGRAM</h6>
+</div>
+<div id="insta-pic-outer"></div>
+
+<style type="text/css">
+h1, h2, h3, h4, h5, h6
+{
+	margin:0px;
+	padding: 0px;
+}
+h6
+{
+	font-size: 16px;
+}
+h4
+{
+	font-size: 30px;
+}
+h3
+{
+	font-size: 40px;
+}
+.pads
+{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+@media (max-width:600px)
+{
+	.pads
+	{
+		padding-left: 10px;
+		padding-right: 10px;	
+	}
+}
+@media (max-width:800px) and (min-width:601px)
+{
+	.pads
+	{
+		padding-left: 30px;
+		padding-right: 30px;	
+	}
+}
+w3-container, w3-half, w3-quarter, w3-third, w3-two-third, w3-rest, w3-threequarter, w3-left, w3-right
+{
+	padding:0px;
+	margin:0px;
+}
+.footer .first
+{
+	padding-left:100px;
+	background-color: #eaeaea;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+.footer .second
+{
+	background-color: #2d2d2d;
+	padding-right:100px;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+@media (max-width:600px)
+{
+	.footer .first
+	{
+		padding-left: 10px;
+	}
+	.footer .second
+	{
+		padding-right: 10px;
+	}
+}
+@media (max-width:800px) and (min-width:601px)
+{
+	.footer .first
+	{
+		padding-left: 30px;
+	}
+	.footer .second
+	{
+		padding-right: 30px;
+	}
+}
+.footer .second p, .footer .first p
+{
+	color: #7c7c7c;
+}
+.footer .first h6
+{
+	color: #262626;
+	font-size: 17px;
+}
+.footer .second h6
+{
+	color: #eee;
+	font-size: 17px;
+}
+.footer .first p span
+{
+	margin-bottom: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+.brochure
+{
+	background-color: #6c98e1;
+	color: #fff;
+	border:2px solid #6c98e1;
+    padding: 10px 6px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+    font-weight: 600;
+    float:left;
+    width:150px;
+    text-align: center;
+    margin-top:3px;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.brochure:hover
+{
+	background-color: transparent;
+	color: #6c98e1;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.second .content
+{
+	color: #7c7c7c;
+	font-size: 16px;
+}
+.second .content .break i
+{
+	font-size: 40px;
+	display: inline-block;
+}
+.second .content .break span
+{
+	display: inline-block;
+	padding-left:15px;
+}
+.second .content .break
+{
+	margin-bottom: 20px;
+}
+.second .content .more
+{
+	background-color: #7c7c7c;
+	color: #2d2d2d;
+	border:2px solid #7c7c7c;
+	padding:10px 25px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight:600;
+	text-align: center;
+	width: 150px;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.second .content .more:hover
+{
+	background-color: transparent;
+	color: #7c7c7c;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+</style>
+<div class="w3-container footer">
+	<div class="w3-container w3-twothird first">
+		<div class="w3-padding">
+			<h6>ABOUT LAUGHING & SILENCE</h6>
+			<br>
+			<p>Laughing & silence is a unique method of meditation. If people could laugh totally every day, atleast once without any reason, they could not need any other meditaion. that could be enough while you are laughing you can not be in past, neither in future, just in present.</p>
+			<div class="brochure  open-modal-a" data-modal="#modal1-a">More <i class="fas fa-plus"></i></div>
+		</div>
+	</div>
+	<div class="w3-container w3-third second">
+		<div class="w3-container w3-padding">
+			<h6>GET IN TOUCH</h6>
+			<br>
+		</div>
+		<div class="w3-container w3-padding content">
+			<div class="break">
+				<i class="fas fa-street-view"></i>
+				<span>Somewhere<br>
+				Delhi -000000</span>
+			</div>
+			<div class="break">
+				<i class="fas fa-phone"></i>
+				<span>+91 7678516839<br>osholaughing@gmail.com</span>
+			</div>
+			<a href="https://instagram.com/osholaughing"><div class="more open-modal-b" data-modal="#modal1-b">More <i class="fas fa-plus"></i></div></a>
+		</div>
+	</div>
+</div>
+
+<style>
+
+.title-b
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-b p
+{
+font-size:18px;
+}
+
+.close-modal-b
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-b:hover
+{
+	background-color: tomato;
+}
+.overlay-b {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-b.open-b {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-b .modal-b {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-b .modal-b.open-b {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-b .modal-b.open-b .content-b {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-b .modal-b .content-b {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-b .modal-b .title-b {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	.overlay-b, #modal1-b
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+<div class='modal-b' id='modal1-b'>
+	<div class='content-b'>
+		<div class='title-b'>Contact Us</div>
+		<hr>
+		<div>
+			<style type="text/css">
+			.header-outer-naming-whatsapp
+			{
+				background-color: #09b83e;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #09b83e;
+				text-align: center;
+			}
+			.header-outer-naming-gmail
+			{
+				background-color: #dd4b39;
+				padding:5px;
+				color: #fff;
+				border-radius: 2px;
+				border:2px solid #dd4b39;
+				text-align: center;
+			}
+			.head
+			</style>
+
+			<a href="https://youtube.com/UCnzlY_nUKbCWXqK4UjjfQLw" target="_blank"><div class="header-outer-naming-youtube">YouTube&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<br>
+			<a href="https://twitter.com/osholaughing.com" target="_blank"><div class="header-outer-naming-twitter">Twitter&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<br>
+			<a href="https://facebook.com/osholaughing.com" target="_blank"><div class="header-outer-naming-facebook">Facebook&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<br>
+			<a href="https://instagram.com/osholaughing.com" target="_blank"><div class="header-outer-naming-instagram">Instagram&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+			<br>
+			<div class="header-outer-naming-whatsapp">Whatsapp<br>+91 7678516839</div>
+			<br>
+			<a href="<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=osholaughing@gmail.com&su=" target="_blank"><div class="header-outer-naming-gmail">Gmail&nbsp;&nbsp;<i class="far fa-paper-plane"></i></div></a>
+
+		</div>
+		<br><br>
+		<a class='close-modal-b' data-modal="#modal1-b" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-b").each( function(){
+	$(this).wrap('<div class="overlay-b"></div>')
+});
+
+$(".open-modal-b").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-b").addClass("open-b");
+	setTimeout( function(){
+		$(modal).addClass("open-b");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-b")){
+			$(target).find(".modal-b").each( function(){
+				$(this).removeClass("open-b");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-b");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-b").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-b");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-b").removeClass("open-b");
+	}, 350);
+	
+});	
+</script>
+<script type="text/javascript">
+if($(document).width()>600)
+{
+	$(".first").height($(".second").height());
+	$(".second").height($(".first").height());
+}
+</script>
+
+<style type="text/css">
+.copy
+{
+	background-color: #fff;
+	color: #7c7c7c;
+	font-size: 16px;
+	font-family: 'Roboto';
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+</style>
+<div class="copy pads w3-container">
+	<div class="w3-left">
+		Developed By : <u> Rishabh Rana </u>
+	</div>
+	<div class="w3-right">
+		&copy;&nbsp;All Rights Reserved
+	</div>
+</div>
+
+<style>
+
+.title-a
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-a p
+{
+font-size:18px;
+}
+
+.close-modal-a
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-a:hover
+{
+	background-color: tomato;
+}
+.overlay-a {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-a.open-a {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-a .modal-a {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-a .modal-a.open-a {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-a .modal-a.open-a .content-a {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-a .modal-a .content-a {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-a .modal-a .title-a {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	.overlay-a, #modal1-a
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+<div class='modal-a' id='modal1-a'>
+	<div class='content-a'>
+		<div class='title-a'>More about laughing & silence&nbsp;&nbsp;&nbsp;<a class='close-modal-a' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;" data-modal="#modal1-a" href="#">X</a></div>
+		<hr>
+		<div>
+			Laughter is the highest religious quality.<br>
+			And if we can decide that every year, for one hour,<br>
+			at a certain date, at a certain time,<br>
+			the whole world will laugh.<br>
+			It will help to dispel darkness, violence, stupidities.<br>
+			<br>
+			Laughter has a beauty, multidimensional.<br>
+			It can relax you, it can suddenly make you feel light,<br>
+			it can make your world not a burden,<br>
+			but a beautiful experience.<br>
+			It can change everything in your life.<br>
+			Just the touch of laughter can make life<br>
+			something worth living, something to be greatful for.<br>
+			<b>- OSHO<br></b>
+		</div>
+		<br><br>
+		<a class='close-modal-a' data-modal="#modal1-a" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-a").each( function(){
+	$(this).wrap('<div class="overlay-a"></div>')
+});
+
+$(".open-modal-a").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-a").addClass("open-a");
+	setTimeout( function(){
+		$(modal).addClass("open-a");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-a")){
+			$(target).find(".modal-a").each( function(){
+				$(this).removeClass("open-a");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-a");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-a").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-a");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-a").removeClass("open-a");
+	}, 350);
+	
+});	
+</script>
+
+<script type="text/javascript">
+if($(document).width()>1110)
+{
+	$("#insta-pic-outer").load('./110-more.html');
+}
+if($(document).width()<1110)
+{
+	$("#insta-pic-outer").load('./110-less.html');
+}
+</script>
+
+</body>
+</html>

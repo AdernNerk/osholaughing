@@ -1,0 +1,62 @@
+<style type="text/css">
+.instagram-pic
+{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.blocks
+{
+	width: 160px !important;
+	height: 165px !important;
+}
+#insta-pic
+{
+	height: 165px !important;
+	width: 160px !important;
+	float: left;
+}
+.instagram-pic .blocks .more
+{
+	width: 160px;
+	height: 165px;
+	background-color: #202020;
+	border: 2px solid #fff;
+	color:#fff;
+	font-size: 17px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+	text-align: center;
+	padding-top:69px;
+	border:1px solid #eee;
+}
+.instagram-pic .blocks .more:hover
+{
+	color: #202020;
+	border: 2px solid #6c98e1;
+	background-color: #eee;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+</style>
+<div class="w3-container instagram-pic">
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/4.jpeg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/19.jpeg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/8.jpg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/7.jpg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/3.jpeg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/5.jpeg"></div>
+	<div class="w3-container blocks"><img id="insta-pic" style="border:1px solid #eee" src="./img/1.jpg"></div>
+	<div class="w3-container blocks"><a href="https://instagram.com/osholaughing" target="_blank"><div id="insta-pic insta-mored" class="more">Show More</div></a></div>
+</div>
+<script type="text/javascript">
+$("#insta-pic").width($(".instagram-pic").width());
+$("#insta-pic").height($(".instagram-pic").height());
+</script>
